@@ -1,0 +1,19 @@
+---
+title: "This is Tunisia"
+author: "Data Analyst"
+date: "October 4, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(leaflet)
+#Initialize the basemap
+my_map = leaflet() %>%
+    addTiles()%>%
+    setView(my_map, lng=10.3414, lat = 36.8698, zoom = 150)%>%
+    addMarkers(my_map, lat=36.8698, lng=10.3414, popup="Sidi bousaid, Tunisia") 
+   
+my_map
+
+
+```
